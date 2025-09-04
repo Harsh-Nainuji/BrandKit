@@ -1,21 +1,23 @@
+import { FiCpu, FiZap, FiTarget } from "react-icons/fi";
+
 export default function About() {
   const features = [
     {
-      icon: "🎨",
+      icon: <FiCpu className="w-6 h-6 text-white" />,
       title: "AI-Powered",
       text: "Advanced AI generates unique brand elements",
       bg: "bg-blue-50",
       iconBg: "bg-blue-600",
     },
     {
-      icon: "⚡",
+      icon: <FiZap className="w-6 h-6 text-white" />,
       title: "Instant Results",
       text: "Get your complete brand kit in seconds",
       bg: "bg-purple-50",
       iconBg: "bg-purple-600",
     },
     {
-      icon: "🎯",
+      icon: <FiTarget className="w-6 h-6 text-white" />,
       title: "Tailored",
       text: "Customized to your industry and style",
       bg: "bg-green-50",
@@ -38,8 +40,10 @@ export default function About() {
               key={i}
               className={`${f.bg} p-8 rounded-2xl shadow-lg hover:shadow-xl transition`}
             >
-              <div className={`flex items-center justify-center w-14 h-14 mx-auto mb-4 ${f.iconBg} rounded-lg`}>
-                <span className="text-xl text-white">{f.icon}</span>
+              <div
+                className={`flex items-center justify-center w-14 h-14 mx-auto mb-4 ${f.iconBg} rounded-lg`}
+              >
+                {f.icon}
               </div>
               <h3 className="mb-2 text-lg font-semibold text-gray-900">{f.title}</h3>
               <p className="text-gray-700">{f.text}</p>
