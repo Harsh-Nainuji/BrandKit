@@ -23,31 +23,28 @@ function incrementRequestCount() {
 }
 
 export async function generateBrandKit({ idea, industry, style }) {
-  // Check daily limit
   if (getRequestCount() >= MAX_REQUESTS_PER_DAY) {
-    throw new Error(
-      `Daily request limit reached (${MAX_REQUESTS_PER_DAY}). Please try again tomorrow.`
-    );
+    alert(`❌ Daily limit reached (${MAX_REQUESTS_PER_DAY}). Try again tomorrow.`);
+    throw new Error("Daily limit reached");
   }
 
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
+  // Shorter prompt = fewer tokens
   const prompt = `
-You are a brand consultant. Based on the founder's input, generate a simple brand kit:
-- A short and catchy **brand name**
-- A suggested **color palette** (3 colors with hex codes)
-- A **short bio/description**
-- A strong **call to action**
+Generate a mini brand kit:
+- Brand name (short)
+- Color palette (3 hex codes)
+- 1–2 line description
+- Call to action
 
-Founder Idea: ${idea}
+Idea: ${idea}
 Industry: ${industry}
 Style: ${style}
-Keep it concise.
   `;
 
   const result = await model.generateContent(prompt);
 
-  // Increment request count after successful generation
   incrementRequestCount();
 
   return result.response.text();
