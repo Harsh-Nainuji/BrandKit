@@ -1,12 +1,50 @@
-# React + Vite
+# 🪄 AI Brand Kit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI Brand Kit is an **AI-powered platform** that helps founders and creators instantly generate a unique **brand identity**.  
 
-Currently, two official plugins are available:
+Simply describe your idea, select an industry, and choose your preferred style — in seconds, the AI will generate:  
+- ✅ Brand Name  
+- 🎨 Brand Colors / Palette  
+- ✍️ Brand Bio  
+- 📣 Brand Call-to-Action (CTA)  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is built with **React + Vite + Tailwind CSS** and powered by **Gemini API** for AI-generated results.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+- **AI-Powered Branding** → Describe your idea, and let AI do the heavy lifting.  
+- **Custom Aesthetics** → Choose from multiple design styles (minimal, classic, bold, modern, etc.).  
+- **Instant Brand Kit** → Get your name, colors, bio, and CTA in one place.  
+- **Daily Limit** → For now, each user gets **3 free brand kits per day**.  
+
+---
+
+## 🖼️ Demo Workflow
+
+1. **Input** → Enter your business idea.  
+2. **Select Industry** → Pick the sector your idea belongs to.  
+3. **Choose Style** → Minimal, Classic, Modern, Bold, etc.  
+4. **Generate** → Instantly get your unique **Brand Kit**.  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend** → React.js (Vite) + Tailwind CSS  
+- **Backend/AI** → Gemini API (via Google AI)  
+- **Deployment** → Vercel / Netlify  
+
+---
+
+## 📦 Installation
+
+Clone this repository:
+
+```bash
+git clone https://github.com/your-username/ai-brand-kit.git
+cd ai-brand-kit
+npm install
+VITE_GEMINI_API_KEY=your_api_key_here
+npm run dev
