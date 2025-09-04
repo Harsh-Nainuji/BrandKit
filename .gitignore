@@ -1,0 +1,40 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Production / build output
+dist/
+dist-ssr/
+
+# Local environment files (do NOT commit your Gemini API key!)
+.env
+.env.local
+.env.*.local
+
+# Vite cache
+.vite/
+
+# Tailwind CSS generated files
+*.css.map
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Optional: OS generated files
+Thumbs.db
+desktop.ini

@@ -1,0 +1,9 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enable smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
